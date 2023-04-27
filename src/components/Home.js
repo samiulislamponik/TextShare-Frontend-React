@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import TextForm from "./TextForm";
+const apiUrl = process.env.REACT_APP_API_URL;
 
 const Home = () => {
     const navigate = useNavigate();
     const [textSnippet, setTextSnippet] = useState(null);
 
     const saveText = async () => {
-        const response = await fetch("/text/", {
+        const response = await fetch(`${apiUrl}/text/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import TextForm from "./TextForm";
+const apiUrl = process.env.REACT_APP_API_URL;
 
 const TextView = () => {
     const { url } = useParams();
@@ -9,7 +10,7 @@ const TextView = () => {
 
     useEffect(() => {
         const fetchText = async () => {
-            const response = await fetch(`/text/${url}`);
+            const response = await fetch(`${apiUrl}/text/${url}`);
             const data = await response.json();
             setTextSnippet(data);
         };
