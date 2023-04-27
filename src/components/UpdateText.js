@@ -18,7 +18,7 @@ const UpdateText = () => {
     }, [url]);
 
     const updateText = async () => {
-        await fetch(`/text/${url}/edit/`, {
+        await fetch(`${apiUrl}/text/${url}/edit/`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
