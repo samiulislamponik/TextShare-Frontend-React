@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# Text Sharing Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web application for sharing snippets of text, built with Django, Django REST Framework, and React.
 
-## Available Scripts
+### Table of Contents
 
-In the project directory, you can run:
+-   [Text Sharing Web Application](#text-sharing-web-application)
+    -   [Table of Contents](#table-of-contents)
+    -   [Project Overview](#project-overview)
+        -   [Backend-Repository](#backend-repository)
+    -   [Technologies Used in Front-End](#technologies-used-in-front-end)
+    -   [Features](#features)
+    -   [Getting Started](#getting-started)
+    -   [Usage](#usage)
+    -   [API Endpoints](#api-endpoints)
+    -   [Future Improvements](#future-improvements)
+    -   [Contributing](#contributing)
+    -   [Developer Documentation](#developer-documentation)
+        -   [Frontend](#frontend)
+    -   [License](#license)
 
-### `npm start`
+## Project Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The Text Sharing Web Application is a simple program that allows users to save and share text snippets. Users can enter the text into a text area and save it, and the text is stored in a persistent data store. The program generates a unique URL for each saved text snippet, which can be used to retrieve and edit the text.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### [Backend-Repository](https://github.com/samiulislamponik/TextShare-Backend-Railway)
 
-### `npm test`
+## Technologies Used in Front-End
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   React Js
+-   Bootstrap
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The following features are available in this web application:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-   Users can enter text into a text area and save it.
+-   The saved text is stored in a persistent data store.
+-   A URL is generated for the saved text which can be used to retrieve and edit the text.
+-   When a user follows the URL, the saved text is displayed along with an option to edit the text.
+-   When a user clicks the edit button, the text is copied and placed in the same interface used to create new text snippets.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+To get started with the Text Sharing Web Application, follow these steps:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository: `git clone https://github.com/samiulislamponik/TextShare-Frontend-React.git`
+2. Install the required dependencies: `node js`
+3. Run the server: `npm start`
+4. Navigate to http://localhost:3000/ in your web browser to access the application.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To use this web application, follow these steps:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Open your web browser and navigate to [(TextShare)](https://text-share-zeta.vercel.app/).
+2. Enter text into the text area.
+3. Click the "Save" button to save the text.
+4. A URL will be generated for the saved text.
+5. To retrieve and edit the saved text, follow the URL and click the "Edit" button.
+6. The saved text will be displayed and can be edited in the same interface used to create new text snippets.
 
-## Learn More
+## API Endpoints
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The Text Sharing Web Application exposes the following API endpoints:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-   `POST https://web-production-a568.up.railway.app/text/`: Creates a new text snippet.
+-   `PUT https://web-production-a568.up.railway.app/text/<str:url>/edit/`: Updates an existing text snippet.
+-   `GET https://web-production-a568.up.railway.app/text/<str:url>/`: Retrieves an existing text snippet.
 
-### Code Splitting
+## Future Improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Some possible future improvements for the Text Sharing Web Application include:
 
-### Analyzing the Bundle Size
+-   Adding a URL copy section, so that user can copy the generated url by one click.
+-   Handle errors, for example if user put the wrong url which isn't valid than app will redirect to page not found page.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contributing
 
-### Making a Progressive Web App
+If you'd like to contribute to this web application, please follow these steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Fork the repository.
+2. Create a new branch: `git checkout -b <branch-name>`
+3. Make your changes and commit them: `git commit -m '<commit-message>'`
+4. Push your changes to your fork: `git push origin <branch-name>`
+5. Create a pull request.
 
-### Advanced Configuration
+## Developer Documentation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+`Note:` The functions used in the `written code` titles were not generated by framework templates.
 
-### Deployment
+#### [Frontend](URL)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## License
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The Text Sharing Web Application is licensed under the MIT License. See LICENSE.txt for more information.
