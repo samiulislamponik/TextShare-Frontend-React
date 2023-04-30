@@ -1,4 +1,8 @@
-![coding](./coding.png)
+<p align="center">
+  <img src="./coding.png" alt="Image" width="200" height="200">
+</p>
+
+
 
 <h1 align="center">DEVELOPER GUIDE</h1>
 
