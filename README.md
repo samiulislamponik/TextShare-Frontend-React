@@ -73,7 +73,6 @@ The Text Sharing Web Application exposes the following API endpoints:
 
 Some possible future improvements for the Text Sharing Web Application include:
 
--   Adding a URL copy section, so that user can copy the generated url by one click.
 -   Handle errors, for example if user put the wrong url which isn't valid than app will redirect to page not found page.
 
 ## Contributing
